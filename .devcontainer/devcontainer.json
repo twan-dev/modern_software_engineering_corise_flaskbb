@@ -35,7 +35,9 @@
 			"extensions": [
 				"streetsidesoftware.code-spell-checker",
 				"ms-python.python",
-				"ms-python.vscode-pylance"
+				"ms-python.vscode-pylance",
+				"ms-python.pylint",
+				"dbaeumer.vscode-eslint"
 			]
 		}
 	}
