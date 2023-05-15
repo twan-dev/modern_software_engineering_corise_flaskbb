@@ -44,7 +44,8 @@
 				"ms-python.pylint",
 				"dbaeumer.vscode-eslint",
 				"ms-vscode.live-server",
-				"ms-azuretools.vscode-docker"
+				"ms-azuretools.vscode-docker",
+				"github.vscode-github-actions"
 			]
 		}
 	}
