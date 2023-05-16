@@ -11,6 +11,8 @@ pytest
 pytest-cov
 pytest-mock
 pytest-xdist
+pytest-flask
+pytest-playwright
 psutil
 responses
 tox>=3.0.0
