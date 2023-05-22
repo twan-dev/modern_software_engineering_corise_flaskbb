@@ -14,6 +14,7 @@ on:
       - '**/CHANGES'
       - '**/AUTHORS'
       - '**/LICENSE'
+  # [CoRiseTODO modify this workflow to run on each pull request]
 
 jobs:
   build:
@@ -53,6 +54,8 @@ jobs:
     - name: Prepare FlaskBB
       run: |
         flaskbb translations compile
+    
+    # [CoRiseTODO add another job to the workflow that will run flake8 and report any errors that were introduced in the proposed change]
         
     - name: Test with pytest
       run: |
