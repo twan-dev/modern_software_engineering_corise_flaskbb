@@ -380,6 +380,7 @@ class ManageForum(MethodView):
         )
 
     # TODO(anr): Clean this up. @_@
+    # CoRise TODO: refactor this method by extracting a class called TopicManager which contains the logic of this method.
     def post(self, forum_id, slug=None):  # noqa: C901
         forum_instance, __ = Forum.get_forum(
             forum_id=forum_id, user=real(current_user)
