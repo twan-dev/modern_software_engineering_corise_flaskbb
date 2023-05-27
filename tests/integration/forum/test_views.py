@@ -1,0 +1,1 @@
+# CoRise TODO: implement a integration test to validate the functionality of post method
