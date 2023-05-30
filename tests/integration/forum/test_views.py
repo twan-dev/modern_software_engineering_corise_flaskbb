@@ -21,11 +21,31 @@ def test_topic_required(application, forum, super_moderator_user):
         assert response.status_code == 200
         assert "In order to perform this action you have to select at least one topic." in response.get_data(as_text=True)
 
-def test_requires_a_moderator(application, forum, topic):
+def test_requires_a_logged_in_moderator(application, forum, topic):
     application.config['WTF_CSRF_ENABLED'] = False
 
     with application.test_client() as test_client:
         manage_forum_url = url_for("forum.manage_forum", forum_id=forum.id)
+        
+        response = test_client.post(manage_forum_url, data = {
+            "rowid": topic.id,
+             "highlight": True,
+        }, follow_redirects=True)
+
+        assert response.status_code == 200
+        assert "You are not allowed to manage this forum" in response.get_data(as_text=True)
+
+def test_requires_a_user_with_moderator_permissions(application, forum, topic, user):
+     application.config['WTF_CSRF_ENABLED'] = False
+
+     with application.test_client() as test_client:
+        manage_forum_url = url_for("forum.manage_forum", forum_id=forum.id)
+
+        login_response = test_client.post(url_for('auth.login'), data={'login': user.username,
+                                        'password': 'test'},
+                        follow_redirects=True)
+        
+        assert login_response.status_code == 200
         
         response = test_client.post(manage_forum_url, data = {
             "rowid": topic.id,
