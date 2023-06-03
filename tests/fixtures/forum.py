@@ -64,6 +64,15 @@ def topic_locked(forum, user):
     post = Post(content="Test Content Locked")
     return topic.save(forum=forum, user=user, post=post)
 
+@pytest.fixture
+def topic_hidden(forum, user):
+    """A topic hidden by a normal user"""
+    topic = Topic(title="Test Topic Locked")
+    post = Post(content="Test Content Locked")
+    topic = topic.save(forum=forum, user=user, post=post)
+    topic.hide(user)
+    return topic.save()
+
 
 @pytest.fixture
 def topic_in_locked_forum(forum_locked, user):
