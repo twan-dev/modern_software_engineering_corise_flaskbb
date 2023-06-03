@@ -15,6 +15,17 @@ from flaskbb.utils.helpers import (
 )
 from flaskbb.utils.settings import flaskbb_config
 
+###################################################################
+# CoRise TODO: add unit tests below that test the functionality of:
+# - to_bytes
+# - to_unicode
+# - redirect_url
+# functions defined in `flaskbb/util/helpers.py`
+# NOTE: You'll need to import them from flaskbb.utils.helpers
+
+# ADD CODE HERE
+
+###################################################################
 
 def test_slugify():
     """Test the slugify helper method."""
