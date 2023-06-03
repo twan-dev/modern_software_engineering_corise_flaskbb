@@ -29,7 +29,7 @@ from flaskbb.forum.models import (Category, Forum, ForumsRead, Post, Topic,
                                   TopicsRead)
 from flaskbb.markup import make_renderer
 from flaskbb.user.models import User
-from flaskbb.utils.helpers import (FlashAndRedirect, do_topic_action,
+from flaskbb.utils.helpers import (FlashAndRedirect,
                                    format_quote, get_online_users, real,
                                    register_view, render_template, time_diff,
                                    time_utcnow)
