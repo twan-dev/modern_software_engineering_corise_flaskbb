@@ -51,3 +51,12 @@ def database():
     yield db
 
     db.drop_all()
+
+
+###################################################################
+# CoRise TODO: add a new fixture `translations` that calls the
+# `compile_translations` function from flaskbb.utils.translations
+
+# ADD CODE HERE
+
+###################################################################
