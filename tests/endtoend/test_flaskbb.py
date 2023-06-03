@@ -9,15 +9,17 @@ from playwright.sync_api import Page
 
 @pytest.fixture
 def app():
-    # TODO: ADD CODE HERE
     # Hint: create the app, and setup any default context like translations,
     # settings, DB, etc.
+    # Hint: take a look at the tests/fixtures/app.py file for the details of 
+    # how to configure the application.
+    # TODO: ADD CODE HERE
     pass
 
 def test_load_home_page(live_server, page: Page):
-    # TODO: ADD CODE HERE
     # Hint: Check out `flask.url_for` helper function to get the external url for 
     # an endpoint. Then go to it using playwright's `page.goto(url)`
+    # TODO: ADD CODE HERE
     pass
 
 ###################################################################
