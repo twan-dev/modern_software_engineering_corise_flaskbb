@@ -129,6 +129,8 @@ class TestChangePasswordForm(object):
 
 class TestChangeUserDetailsForm(object):
     def test_transforms_to_expected_change_object(self):
+        # CoRise TODO: fix this this test so that it passes.
+        # Hint: does the format of the data look right to you?
         data = MultiDict(
             dict(
                 submit=True,
@@ -170,6 +172,7 @@ class TestChangeUserDetailsForm(object):
         ],
     )
     def test_valid_inputs(self, formdata):
+        # CoRise TODO: fix this this test so that it passes.
         data = dict(
             submit=True,
             birthday="25 06 2000",
