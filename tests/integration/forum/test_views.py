@@ -100,3 +100,27 @@ def test_delete_topic(application, forum, topic, super_moderator_user):
     fresh_topic = Topic.query.filter_by(id=topic.id).first()
     
     assert fresh_topic is None
+
+
+def test_requires_a_user_with_moderator_to_delete_topic(application, forum, topic, user):
+    application.config['WTF_CSRF_ENABLED'] = False
+
+    with application.test_client() as test_client:
+        manage_forum_url = url_for("forum.manage_forum", forum_id=forum.id)
+
+        login_response = test_client.post(url_for('auth.login'), data={'login': user.username,
+                                        'password': 'test'},
+                        follow_redirects=True)
+        
+        assert login_response.status_code == 200
+        
+        response = test_client.post(manage_forum_url, data = {
+            "rowid": topic.id,
+             "delete": True,
+        }, follow_redirects=True)
+
+        assert response.status_code == 200
+
+    fresh_topic = Topic.query.filter_by(id=topic.id).first()
+    
+    assert fresh_topic is not None
