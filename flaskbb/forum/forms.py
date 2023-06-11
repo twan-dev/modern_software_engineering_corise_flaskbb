@@ -111,8 +111,8 @@ class SpecialTopicForm(TopicForm):
        self.title.process_data(f'Special Topic: {self.title.data}')
        self.content.process_data(f'Special Topic: {self.content.data}')
        
-    
 
+       
 class NewTopicForm(TopicForm):
     pass
 
