@@ -12,7 +12,9 @@
 	},
 
 	"features": {
-		"ghcr.io/devcontainers-contrib/features/coverage-py:2": {}
+		"ghcr.io/devcontainers-contrib/features/coverage-py:2": {},
+		"ghcr.io/devcontainers/features/terraform": "latest",
+		"ghcr.io/devcontainers/features/github-cli": "latest"
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
