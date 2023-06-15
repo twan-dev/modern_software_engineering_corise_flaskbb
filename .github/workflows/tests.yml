@@ -14,16 +14,16 @@ on:
       - '**/CHANGES'
       - '**/AUTHORS'
       - '**/LICENSE'
-    pull_request:
-      branches: [ main ]
-      paths-ignore:
-        - 'docs/**'
-        - 'flaskbb/themes/**'
-        - '**.md'
-        - '**.rst'
-        - '**/CHANGES'
-        - '**/AUTHORS'
-        - '**/LICENSE'
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - 'docs/**'
+      - 'flaskbb/themes/**'
+      - '**.md'
+      - '**.rst'
+      - '**/CHANGES'
+      - '**/AUTHORS'
+      - '**/LICENSE'
 
 jobs:
   build:
