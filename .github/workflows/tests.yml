@@ -16,18 +16,18 @@ on:
       - '**/LICENSE'
       - 'terraform/**'
       - .github/workflows/terraform.yml
-    pull_request:
-      branches: [ main ]
-      paths-ignore:
-        - 'docs/**'
-        - 'flaskbb/themes/**'
-        - '**.md'
-        - '**.rst'
-        - '**/CHANGES'
-        - '**/AUTHORS'
-        - '**/LICENSE'
-        - 'terraform/**'
-        - .github/workflows/terraform.yml
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - 'docs/**'
+      - 'flaskbb/themes/**'
+      - '**.md'
+      - '**.rst'
+      - '**/CHANGES'
+      - '**/AUTHORS'
+      - '**/LICENSE'
+      - 'terraform/**'
+      - .github/workflows/terraform.yml
 
 jobs:
   build:
