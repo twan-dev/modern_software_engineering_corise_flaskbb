@@ -25,7 +25,7 @@ jobs:
                 aws-region: "your_aws_region" # CoRise TODO fill in the region that you will be using.
 
             - name: Upload application file to AWS
-              run: aws s3 cp your_applicaiton.zip s3://your_s3_bucket_name # CoRise TODO filling the name of the aprlication file and the name of the bucket you created
+              run: aws s3 cp your_application.zip s3://your_s3_bucket_name # CoRise TODO filling the name of the aprlication file and the name of the bucket you created
 
             - name: Create new application version
               run: |  # CoRise TODO filling the name of the aprlication file and the name of the bucket you created
