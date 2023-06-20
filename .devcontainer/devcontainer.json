@@ -20,6 +20,10 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "/home/vscode/venv/bin/pip --disable-pip-version-check --no-cache-dir install -r requirements-dev.txt && /home/vscode/venv/bin/playwright install && /home/vscode/venv/bin/playwright install-deps",
 
+	"runArgs": ["--volume=/var/lib/docker", "--privileged"],
+
+	"postStartCommand": "sudo service docker start && sudo chmod 666 /var/run/docker.sock",
+
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
