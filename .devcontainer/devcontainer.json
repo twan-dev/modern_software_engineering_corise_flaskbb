@@ -22,7 +22,8 @@
 
 	"runArgs": ["--volume=/var/lib/docker", "--privileged"],
 
-	"postStartCommand": "sudo service docker start && sudo chmod 666 /var/run/docker.sock",
+	// start docker and add user to docker group
+	"postStartCommand": "sudo service docker start",
 
 	// Configure tool-specific properties.
 	"customizations": {
